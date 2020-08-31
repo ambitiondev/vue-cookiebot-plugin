@@ -1,0 +1,25 @@
+# YARN & NPM
+node_modules
+yarn-error.log
+package-lock.json
+yarn-lock.json
+yarn.lock
+.npmignore
+
+# MISC
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+
+# EDITORS
+.idea/
+.vscode/
+
+# TEST ENV
+test
+
+# ENV SETTINGS
+.env
+
+# BUILD
+dist

@@ -1,0 +1,35 @@
+{
+  "name": "@ambitiondev/vue-cookiebot-plugin",
+  "version": "0.0.1",
+  "description": "A plugin to add cookiebot scripts and call cookiebot related functions",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambitiondev/vue-cookiebot-plugin.git"
+  },
+  "keywords": [
+    "vue",
+    "cookiebot",
+    "plugin",
+    "ambitiondev",
+    "nachtweh",
+    "berrie"
+  ],
+  "author": {
+    "email": "info@ambitiondev.io",
+    "name": "Berrie Nachtweh",
+    "url": "https://ambitiondev.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ambitiondev/vue-cookiebot-plugin/issues"
+  },
+  "homepage": "https://github.com/ambitiondev/vue-cookiebot-plugin#readme",
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "vue": "^2.6.12"
+  }
+}
