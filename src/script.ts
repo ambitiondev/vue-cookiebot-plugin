@@ -4,7 +4,7 @@ class ScriptHelper {
     private scriptType: string = 'text/javascript'
 
     createScriptWithOptions (options: ScriptOptions, src: string, async: boolean): HTMLElement {
-        const script = document.createElement('script')
+        const script: HTMLScriptElement | any = document.createElement('script')
 
         script.src = src
         script.type = this.scriptType

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "pretty": true,
+    "removeComments": true,
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES5"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

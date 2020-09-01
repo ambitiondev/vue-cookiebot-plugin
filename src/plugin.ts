@@ -3,5 +3,7 @@ import { CookieBotConfig } from '../types/cookiebot'
 import { CookieBot } from './cookiebot'
 
 export const install: PluginFunction<CookieBotConfig> = (Vue: typeof VueImport, config?: CookieBotConfig): void => {
-    Vue.prototype.$cookiebot = new CookieBot(config)
+    if (config) {
+        Vue.prototype.$cookiebot = new CookieBot(config)
+    }
 }
