@@ -2,7 +2,9 @@
   "name": "@ambitiondev/vue-cookiebot-plugin",
   "version": "0.0.1",
   "description": "A plugin to add cookiebot scripts and call cookiebot related functions",
-  "main": "dist/index.js",
+  "main": "dist/vue-cookiebot-plugin.common.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/vue-cookiebot-plugin.esm.js",
   "files": [
     "dist"
   ],
@@ -31,7 +33,6 @@
   "bugs": {
     "url": "https://github.com/ambitiondev/vue-cookiebot-plugin/issues"
   },
-  "types": "dist/types/interface.d.ts",
   "homepage": "https://github.com/ambitiondev/vue-cookiebot-plugin#readme",
   "devDependencies": {
     "path": "^0.12.7",
