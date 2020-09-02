@@ -11,7 +11,7 @@ function outputConfig(suffix, format, opts = {}) {
   return Object.assign(
     {
       file: resolve(`./dist/${moduleName}${suffix}.js`),
-      name: 'PlutonVue',
+      name: 'VueCookieBot',
       exports: 'named',
       sourcemap: true,
       format,
