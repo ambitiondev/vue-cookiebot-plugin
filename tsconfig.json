@@ -2,6 +2,9 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist/types",
     "lib": [
       "dom",
       "es2017"
@@ -14,7 +17,7 @@
     "removeComments": true,
     "rootDir": "src",
     "strict": true,
-    "target": "ES5"
+    "target": "ES5",
   },
   "include": [
     "src/**/*.ts"
