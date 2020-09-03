@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/ambitiondev/vue-cookiebot-plugin#readme",
   "devDependencies": {
+    "es6-promise-promise": "^1.0.0",
     "path": "^0.12.7",
     "rollup-plugin-terser": "^7.0.1",
     "rollup-plugin-typescript2": "^0.27.2",

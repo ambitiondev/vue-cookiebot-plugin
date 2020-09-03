@@ -3,16 +3,16 @@ import { ScriptOption, ScriptOptions } from '../types/script'
 class ScriptHelper {
     private scriptType: string = 'text/javascript'
 
-    createScriptWithOptions (options: ScriptOptions, src: string, async: boolean): HTMLElement {
+    async createScriptWithOptions (options: ScriptOptions, src: string, async: boolean): Promise<HTMLElement> {
         const script: HTMLScriptElement | any = document.createElement('script')
 
         script.src = src
         script.type = this.scriptType
         script.async = async
 
-        options.map((option: ScriptOption) => {
-            script[option.name] = option.value
-        })
+        await Promise.all(options.map((option: ScriptOption) => {
+            return script.setAttribute(option.name, option.value)
+        }))
 
         return script
     }

@@ -1,7 +1,7 @@
 import { BlockingModeOptions, CookieBotConfig } from '../types/cookiebot'
 import ScriptHelper from './script'
 
-export class CookieBot extends ScriptHelper {
+export class CookieBot {
     config: CookieBotConfig
 
     private declarationId: string = 'CookieDeclaration'
@@ -10,9 +10,9 @@ export class CookieBot extends ScriptHelper {
 
     private dialogId: string = 'CybotCookiebotDialog'
 
-    constructor (config: CookieBotConfig) {
-        super()
+    private scriptHelper = new ScriptHelper()
 
+    constructor (config: CookieBotConfig) {
         this.config = config
     }
 
@@ -32,18 +32,18 @@ export class CookieBot extends ScriptHelper {
         return this.config.defaultLocale ? this.config.defaultLocale : this.defaultLocale
     }
 
-    consentDialog (language: string = this.locale, async: boolean = this.isAsync): void {
-        const script = this.createScriptWithOptions([
+    async consentDialog (language: string = this.locale, async: boolean = this.isAsync): Promise<void> {
+        const script = await this.scriptHelper.createScriptWithOptions([
             {
-                name: 'blockingmode',
+                name: 'data-blockingmode',
                 value: this.blockingMode
             },
             {
-                name: 'cbid',
+                name: 'data-cbid',
                 value: this.cookieBotID
             },
             {
-                name: 'culture',
+                name: 'data-culture',
                 value: language
             },
             {
@@ -55,7 +55,7 @@ export class CookieBot extends ScriptHelper {
         document.body.appendChild(script)
     }
 
-    consentPage (context: HTMLElement, language: string = this.locale, async: boolean = this.isAsync): void {
+    async consentPage (context: HTMLElement, language: string = this.locale, async: boolean = this.isAsync): Promise<void> {
         if (!context) {
             throw new Error('Context not defined. Aborting...')
         }
@@ -67,12 +67,12 @@ export class CookieBot extends ScriptHelper {
          * if exists
          */
         if (oldScript !== null) {
-            this.removeScript(context, oldScript)
+            this.scriptHelper.removeScript(context, oldScript)
         }
 
-        const script = this.createScriptWithOptions([
+        const script = await this.scriptHelper.createScriptWithOptions([
             {
-                name: 'culture',
+                name: 'data-culture',
                 value: language
             }
         ], `https://consent.cookiebot.com/${this.cookieBotID}/cd.js`, async)
