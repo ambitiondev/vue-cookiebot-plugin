@@ -38,6 +38,6 @@ This vue plugin allows you to (dynamically) set up your Cookiebot implementation
 
 ## Documentation / API reference
 
-For the full API reference regarding the Vue Plugin install method, see [the Vue plugin install docs]('./docs/install.md')
+For the full API reference regarding the Vue Plugin install method, see [the Vue plugin install docs](docs/install.md)
 
-For a list of available methods and properties on the `$cookiebot` instance, see [the Vue plugin methods docs]('./docs/methods.md')
+For a list of available methods and properties on the `$cookiebot` instance, see [the Vue plugin methods docs](docs/methods.md)
