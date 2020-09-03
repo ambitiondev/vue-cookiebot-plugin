@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "build": "rollup -c --configProd",
-    "docs": "typedoc --name Vue Plugin Cookiebot: available methods and properties --out ./docs ./src/cookiebot.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
