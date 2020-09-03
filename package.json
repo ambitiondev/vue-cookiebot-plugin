@@ -1,6 +1,6 @@
 {
   "name": "@ambitiondev/vue-cookiebot-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A plugin to add cookiebot scripts and call cookiebot related functions",
   "main": "dist/vue-cookiebot-plugin.common.js",
   "types": "dist/types/index.d.ts",
