@@ -17,9 +17,12 @@ class ScriptHelper {
         return script
     }
 
-    removeScript (context: HTMLElement, script: HTMLElement): void {
+    removeScript (context: HTMLElement, script: HTMLElement, resetHTML: boolean = false): void {
         if (script !== null) {
             context.removeChild(script)
+        }
+
+        if (resetHTML === true) {
             context.innerHTML = ''
         }
     }

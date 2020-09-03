@@ -33,6 +33,17 @@ export class CookieBot {
     }
 
     async consentBanner (options: ConsentBaseSettings): Promise<void> {
+        const scriptID = `ScriptID${this.dialogId}`
+        const oldScript = document.getElementById(scriptID)
+
+        /**
+         * To prevent double execution of script tag, first remove script
+         * if exists
+         */
+        if (oldScript !== null) {
+            this.scriptHelper.removeScript(document.body, oldScript)
+        }
+
         const script = await this.scriptHelper.createScriptWithOptions([
             {
                 name: 'data-blockingmode',
@@ -47,8 +58,8 @@ export class CookieBot {
                 value: options?.locale ? options.locale : this.defaultLocale
             },
             {
-                name: 'data-dialog-id',
-                value: this.dialogId
+                name: 'id',
+                value: scriptID
             }
         ], 'https://consent.cookiebot.com/uc.js', options?.async ? options.async : this.isAsync)
 
@@ -67,7 +78,7 @@ export class CookieBot {
          * if exists
          */
         if (oldScript !== null) {
-            this.scriptHelper.removeScript(options?.ref, oldScript)
+            this.scriptHelper.removeScript(options?.ref, oldScript, true)
         }
 
         const script = await this.scriptHelper.createScriptWithOptions([

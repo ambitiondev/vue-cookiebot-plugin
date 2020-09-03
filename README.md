@@ -8,7 +8,6 @@ This vue plugin allows you to (dynamically) set up your Cookiebot implementation
 
 1. Install module: `npm i @ambitiondev/vue-cookiebot-plugin --save` or `yarn add @ambitiondev/vue-cookiebot-plugin`
 2. Go to the main JS-file of your Vue app and add the following:
-
 ```
   import Vue from 'vue'
   ...
@@ -22,9 +21,7 @@ This vue plugin allows you to (dynamically) set up your Cookiebot implementation
     ...
   })
 ```
-
 3. The variable `$cookiebot` has been added to the Vue instance. You can trigger the consent banner where you'd like by executing:
-
 ```
   <script>
     export default {

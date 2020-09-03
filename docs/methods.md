@@ -93,7 +93,7 @@ Appends the needed scripts for displaying the consent page content. Tip: use wit
         this.$cookiebot.consentPage({
           async: true,
           locale: 'en', // tip: replace 'en' with this.$i18n.locale when using vue-i18n
-          ref: this.$refs.consent // Must be a Vue ref
+          ref: this.$refs.consent // Must be a Vue ref or html element
         })
       }
     }
