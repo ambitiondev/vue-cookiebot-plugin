@@ -1,4 +1,4 @@
-# Vue Plugin Cookiebot: available methods
+# Vue Plugin Cookiebot: available methods and properties
 
 ## blockingMode
 
@@ -49,7 +49,7 @@ Appends the needed scripts for displaying the consent banner. Tip: use with [vue
 | Param  | Type | Default | Required |
 | ------ | ---- | ------- | -------- |
 | async | boolean | this.$cookiebot.isAsync | no |
-| language | string | this.$cookiebot.locale | no |
+| locale | string | this.$cookiebot.locale | no |
 
 ### usage:
 
@@ -60,7 +60,7 @@ Appends the needed scripts for displaying the consent banner. Tip: use with [vue
       mounted () {
         this.$cookiebot.consentBanner({
           async: true,
-          language: 'en' // tip: replace 'en' with this.$i18n.locale when using vue-i18n
+          locale: 'en' // tip: replace 'en' with this.$i18n.locale when using vue-i18n
         })
       }
     }
@@ -76,7 +76,7 @@ Appends the needed scripts for displaying the consent page content. Tip: use wit
 | Param  | Type | Default | Required |
 | ------ | ---- | ------- | -------- |
 | async | boolean | this.$cookiebot.isAsync | no |
-| language | string | this.$cookiebot.locale | no |
+| locale | string | this.$cookiebot.locale | no |
 | ref | HTMLVueElement | none | yes |
 
 ### usage:
@@ -92,7 +92,7 @@ Appends the needed scripts for displaying the consent page content. Tip: use wit
       mounted () {
         this.$cookiebot.consentPage({
           async: true,
-          language: 'en', // tip: replace 'en' with this.$i18n.locale when using vue-i18n
+          locale: 'en', // tip: replace 'en' with this.$i18n.locale when using vue-i18n
           ref: this.$refs.consent // Must be a Vue ref
         })
       }
