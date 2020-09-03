@@ -1,4 +1,4 @@
-# Vue Plugin Cookiebot: available methods
+# Vue Plugin Cookiebot: available methods and properties
 
 ## blockingMode
 
