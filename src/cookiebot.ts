@@ -1,4 +1,4 @@
-import { BlockingModeOptions, CookieBotConfig } from '../types/cookiebot'
+import { BlockingModeOptions, ConsentBaseSettings, ConsentPageSettings, CookieBotConfig} from '../types/cookiebot'
 import ScriptHelper from './script'
 
 export class CookieBot {
@@ -32,7 +32,7 @@ export class CookieBot {
         return this.config.defaultLocale ? this.config.defaultLocale : this.defaultLocale
     }
 
-    async consentDialog (language: string = this.locale, async: boolean = this.isAsync): Promise<void> {
+    async consentBanner (options: ConsentBaseSettings): Promise<void> {
         const script = await this.scriptHelper.createScriptWithOptions([
             {
                 name: 'data-blockingmode',
@@ -44,20 +44,20 @@ export class CookieBot {
             },
             {
                 name: 'data-culture',
-                value: language
+                value: options?.locale ? options.locale : this.defaultLocale
             },
             {
                 name: 'data-dialog-id',
                 value: this.dialogId
             }
-        ], 'https://consent.cookiebot.com/uc.js', async)
+        ], 'https://consent.cookiebot.com/uc.js', options?.async ? options.async : this.isAsync)
 
         document.body.appendChild(script)
     }
 
-    async consentPage (context: HTMLElement, language: string = this.locale, async: boolean = this.isAsync): Promise<void> {
-        if (!context) {
-            throw new Error('Context not defined. Aborting...')
+    async consentPage (options: ConsentPageSettings): Promise<void> {
+        if (!options?.ref) {
+            return console.error('Ref key not defined when calling consentPage method. Aborting...')
         }
 
         const oldScript = document.getElementById(this.declarationId)
@@ -67,16 +67,16 @@ export class CookieBot {
          * if exists
          */
         if (oldScript !== null) {
-            this.scriptHelper.removeScript(context, oldScript)
+            this.scriptHelper.removeScript(options?.ref, oldScript)
         }
 
         const script = await this.scriptHelper.createScriptWithOptions([
             {
                 name: 'data-culture',
-                value: language
+                value: options?.locale ? options.locale : this.defaultLocale
             }
-        ], `https://consent.cookiebot.com/${this.cookieBotID}/cd.js`, async)
+        ], `https://consent.cookiebot.com/${this.cookieBotID}/cd.js`, options?.async ? options.async : this.isAsync)
 
-        context.appendChild(script)
+        options.ref.appendChild(script)
     }
 }

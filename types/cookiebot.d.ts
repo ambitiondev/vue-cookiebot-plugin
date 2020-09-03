@@ -5,5 +5,13 @@ export interface CookieBotConfig {
     blockingMode?: BlockingModeOptions;
     cookieBotID: string;
     defaultLocale?: string;
-    targetRef: string;
+}
+
+export interface ConsentBaseSettings {
+    async?: boolean;
+    locale?: string;
+}
+
+export interface ConsentPageSettings extends ConsentBaseSettings {
+    ref: HTMLElement;
 }

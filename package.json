@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "rollup -c --configProd",
+    "docs": "typedoc --name Vue Plugin Cookiebot: available methods and properties --out ./docs ./src/cookiebot.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -43,5 +44,8 @@
     "typescript": "^4.0.2",
     "vue": "^2.6.12",
     "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@types/vue": "^2.0.0"
   }
 }
