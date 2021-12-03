@@ -1,6 +1,6 @@
 # Vue Cookiebot Plugin
 
-[![version](https://img.shields.io/npm/v/@nafia123/vue-3-cookiebot-plugin/latest.svg) ![version](https://img.shields.io/npm/l/@nafia123/vue-3-cookiebot-plugin)
+![version](https://img.shields.io/npm/v/@nafia123/vue-3-cookiebot-plugin/latest.svg) ![version](https://img.shields.io/npm/l/@nafia123/vue-3-cookiebot-plugin)
 
 This vue plugin allows you to (dynamically) set up your Cookiebot implementation and load the consent banner and consent page on demand
 
