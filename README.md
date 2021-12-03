@@ -11,7 +11,7 @@ This vue plugin allows you to (dynamically) set up your Cookiebot implementation
 ```
   import Vue from 'vue'
   ...
-  import VueCookieBot from '@ambitiondev/vue-cookiebot-plugin'
+  import VueCookieBot from '@nafia123/vue-3-cookiebot-plugin'
 
   Vue.use(VueCookieBot, {
     cookieBotID: 'insert your cookiebot ID here'
