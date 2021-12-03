@@ -36,7 +36,7 @@ The variable `$cookiebot` has been added to the Vue instance. You can trigger th
 ```
 
 ### 3.2 Vue 3 
-The variable `$cookiebot` can now be injected. You can trigger the consent banner where you'd like by executing after defining a `$cookiebot` variable:
+The variable `$cookiebot` can now be injected. You can trigger the consent banner where you'd like after defining a `$cookiebot` variable:
 See [Provide/ Inject](https://v3.vuejs.org/guide/component-provide-inject.html) for more information about Provide/ Inject API
 
 ```
@@ -47,7 +47,7 @@ See [Provide/ Inject](https://v3.vuejs.org/guide/component-provide-inject.html) 
     export default {
       name: 'MyVueComponent',
       mounted () {
-        this.$cookiebot.consentBanner()
+        $cookiebot.consentBanner()
       }
     }
   </script>
