@@ -1,7 +1,7 @@
 {
-  "name": "@ambitiondev/vue-cookiebot-plugin",
-  "version": "1.0.1",
-  "description": "A plugin to add cookiebot scripts and call cookiebot related functions",
+  "name": "@nafia123/vue-3-cookiebot-plugin",
+  "version": "1.0.3",
+  "description": "A plugin to add cookiebot scripts and call cookiebot related functions updated for Vue 3",
   "main": "dist/vue-cookiebot-plugin.common.js",
   "types": "dist/types/index.d.ts",
   "module": "dist/vue-cookiebot-plugin.esm.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ambitiondev/vue-cookiebot-plugin.git"
+    "url": "git+https://github.com/SyneticNL/vue-cookiebot-plugin.git"
   },
   "keywords": [
     "vue",
@@ -31,9 +31,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ambitiondev/vue-cookiebot-plugin/issues"
+    "url": "https://github.com/SyneticNL/vue-cookiebot-plugin/issues"
   },
-  "homepage": "https://github.com/ambitiondev/vue-cookiebot-plugin#readme",
+  "homepage": "https://github.com/SyneticNL/vue-cookiebot-plugin#readme",
   "devDependencies": {
     "es6-promise-promise": "^1.0.0",
     "path": "^0.12.7",
