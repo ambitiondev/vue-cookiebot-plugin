@@ -1,6 +1,6 @@
 {
   "name": "@nafia123/vue-3-cookiebot-plugin",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "A plugin to add cookiebot scripts and call cookiebot related functions updated for Vue 3",
   "main": "dist/vue-cookiebot-plugin.common.js",
   "types": "dist/types/index.d.ts",
